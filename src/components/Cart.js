@@ -36,13 +36,13 @@ function Cart({ tasks, setTasks }) {
         
               </span>
             ))}
-            <div className="totalContainer"> {/* container för knapparna längst ner i cart samt total summa */}
+            <div className="totalContainer"> {}
               <p> Summa {totalSum}:-</p>
               <Link to="/Checkout"><button className="toCheckout">Checkout </button></Link>
             </div>
           </div>
 
-          : null /* TOGGLE = där den inte visas, visas null */
+          : null 
       }
 
     </div>
