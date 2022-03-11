@@ -64,15 +64,13 @@ function Navbar(props) {
                     <SearchContainer>
                         <Input placeholder='Search' />
                         <SearchIcon style={{color:"gray"}} />
-                    </SearchContainer>
-                    <Link to="/" style={{ textDecoration: 'none', color: 'black'}}>HOME</Link> 
+                    </SearchContainer> 
                     <span>
-                    <button className="cartBtn">CART</button>
+                         <Cart tasks={props.tasks} setTasks={props.setTasks} addProduct={props.addProduct} />    
                     </span>
                 </Left>
                 <Center>
-                    <Logo>
-                        LA SK.
+                    <Logo><Link to="/">LA SK.</Link> 
                     </Logo>
                 </Center>
                 <Right>

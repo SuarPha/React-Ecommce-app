@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home';
 import Product from './pages/Product';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -21,18 +21,15 @@ function App() {
       found.qty += newProduct.qty
     }
 }
-
+ console.log(tasks)
   return (
     <div>
       <BrowserRouter>
-      <Home>
-        <Navbar tasks={tasks} setTasks={setTasks} addProduct={addProduct} >
+        <Navbar tasks={tasks} setTasks={setTasks} addProduct={addProduct} />
         <Routes>
           <Route path="/products/:id" element={<Product addProduct={addProduct} />} />
           <Route path="/" element={<Home  />} />)
         </Routes>
-        </Navbar>
-        </Home>
       </BrowserRouter>
     </div>
   );

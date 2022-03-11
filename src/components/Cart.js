@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import "../components/ProductsChild.css"
+import ShoppingCartOutlined from '@material-ui/icons/ShoppingCartOutlined';
+import "../components/Cart.css"
 
-function Cart({ tasks}) {
+
+function Cart({ tasks }) {
   const [showShoppingBag, setShoppingBag] = useState(true)
-
 
   let totalSum = 0;
 
@@ -14,13 +15,13 @@ function Cart({ tasks}) {
     })
   }
 
-  productSum();
+   productSum(); 
 
   
 
   return (
     <div className="Dropdown">
-      <button onClick={() => setShoppingBag(!showShoppingBag)} className="showShoppingBag" />
+       <ShoppingCartOutlined onClick={() => setShoppingBag(!showShoppingBag)} className="showingShoppingBag" /> 
 
       {
         showShoppingBag 
@@ -35,7 +36,7 @@ function Cart({ tasks}) {
         
               </span>
             ))}
-            <div className="totalContainer"> {}
+            <div className="totalContainer"> 
               <p> Summa {totalSum}:-</p>
               <Link to="/Checkout"><button className="toCheckout">Checkout </button></Link>
             </div>
