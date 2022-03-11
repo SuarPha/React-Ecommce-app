@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
-import ShoppingCartOutlined from '@material-ui/icons/ShoppingCartOutlined';
 import { Link } from 'react-router-dom'
+import Cart from './Cart'
+import "../components/ProductsChild.css"
 
 
 const Container = styled.div`
@@ -53,7 +54,7 @@ const MenuItem = styled.div`
     cursor: pointer;
     margin-left: 20px;
 `;
-const Navbar = () => {
+function Navbar(props) {
   return (
     
         <Container>
@@ -65,6 +66,9 @@ const Navbar = () => {
                         <SearchIcon style={{color:"gray"}} />
                     </SearchContainer>
                     <Link to="/" style={{ textDecoration: 'none', color: 'black'}}>HOME</Link> 
+                    <span>
+                    <button className="cartBtn">CART</button>
+                    </span>
                 </Left>
                 <Center>
                     <Logo>
@@ -74,12 +78,8 @@ const Navbar = () => {
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SIGN IN</MenuItem>
-                    <MenuItem>
-                        <ShoppingCartOutlined />
-                    </MenuItem>
                 </Right>
             </Wrapper>
-            
         </Container> 
     
   )

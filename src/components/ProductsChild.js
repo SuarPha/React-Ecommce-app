@@ -5,7 +5,7 @@ function ProductsChild(props) {
 
 let qty = 1
 
- const handleSubmit = (e) => {
+ const handleClick = (e) => {
         e.preventDefault();
             const newProduct = {
                 id: props.products.id,
@@ -14,8 +14,9 @@ let qty = 1
                 price: props.products.price,
                 qty: parseInt(document.getElementById(props.products.id + "-quantity").value)
             }
-        props.addProduct(newProduct);
-        qty = 1;
+    props.addProduct(newProduct);
+    qty = 1;
+
     }
     
     return (
@@ -27,7 +28,7 @@ let qty = 1
                     <br/>
                     {props.products.price} :-
                 </p>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleClick}>
                 <input type="number" defaultValue={qty} id={props.products.id + '-quantity'}></input>
                 <button  className="addToCartBtn" >Add to cart</button>
                 <Link to={`/products/${props.products.id}`}><button className="readMoreBtn">Read more</button></Link>

@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import ShoppingCartOutlined from '@material-ui/icons/ShoppingCartOutlined';
 import { Link } from 'react-router-dom'
+import "../components/ProductsChild.css"
 
-function Cart({ tasks, setTasks }) {
+function Cart({ tasks}) {
   const [showShoppingBag, setShoppingBag] = useState(true)
 
-    setTasks(list)
 
   let totalSum = 0;
 
@@ -21,17 +20,17 @@ function Cart({ tasks, setTasks }) {
 
   return (
     <div className="Dropdown">
-      <ShoppingCartOutlined onClick={() => setShoppingBag(!showShoppingBag)} className="showShoppingBag" />
+      <button onClick={() => setShoppingBag(!showShoppingBag)} className="showShoppingBag" />
 
       {
         showShoppingBag 
-          ? <div className="listlist">
+          ? <div className="list">
             {tasks.map(task => (
-              <span className="cartList"
+              <span className="art"
                 key={task.id}>
-                <img className="picList" src={task.img} alt={task.title}></img>
-                <p className="titleList">{task.title}</p>
-                <p className="priceTag">{task.price} :-</p>
+                <img className="Pic" src={task.img} alt={task.title}></img>
+                <p className="Title">{task.title}</p>
+                <p className="Price">{task.price} :-</p>
                 
         
               </span>

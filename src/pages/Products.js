@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ProductsChild from '../components/ProductsChild';
-import Styling from '../components/ProductsChild.css'
+import "../components/ProductsChild.css"
 
 function Products(props) {
   const [productList, setProductList] = useState([]); 
@@ -21,7 +21,7 @@ function Products(props) {
   }, [])
 
   return (
-      <div id={Styling.parentArticle}> 
+      <div id="parentStyle"> 
       {productList.map(products => <ProductsChild key={products.id} products={products} addProduct={props.addProduct} count={props.count} setCount={props.setCount}  />
       )}
     </div>
