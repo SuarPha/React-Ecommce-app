@@ -21,14 +21,14 @@ function App() {
       found.qty += newProduct.qty
     }
 }
- console.log(tasks)
+
   return (
     <div>
       <BrowserRouter>
         <Navbar tasks={tasks} setTasks={setTasks} addProduct={addProduct} />
         <Routes>
           <Route path="/products/:id" element={<Product addProduct={addProduct} />} />
-          <Route path="/" element={<Home  />} />)
+          <Route path="/" element={<Home addProduct={addProduct} />} />)
         </Routes>
       </BrowserRouter>
     </div>
