@@ -27,7 +27,7 @@ function Cart({ tasks }) {
         showShoppingBag 
           ? <div className="list">
             {tasks.map(task => (
-              <span className="art"
+              <span className="Cart"
                 key={task.id}>
                 <img className="Pic" src={task.img} alt={task.title}></img>
                 <p className="Title">{task.title}</p>

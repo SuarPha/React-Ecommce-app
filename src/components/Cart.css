@@ -8,69 +8,55 @@
     margin-top: -45px;
 }
 
-.cList{
+.list{
     background-color: white;
     margin-top: -20px;
-    width: 520px;
-    max-height: 300px;
-    overflow-y: scroll;
+    width: 500px;
+    height: 200px;
+    
 }
 
 .Cart{ 
     position: relative;
-    font-size: x-small;
-    display: block;
-    width: 450px;
-    z-index: 1;
-    padding: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid lightgrey;
+    width: 100px;
+    padding: 2%;
 }
 
 .Pic{ 
-    position: absolute;
-    margin-left: 0px;
-    width: 60px;
-    height: 60px;
+    position: absolute; 
+    width: 90px;
+    height: 90px;
     border: 1px solid black;
+    margin-top: 150%;
 }
 
 .totalContainer{ 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 2%;
+    padding:  5%;
+    padding-top: 150px;
+    border: solid 1px black;
 }
 
-.checkoutBtn{ 
-    width: 30px;
-    height: 20px;
-    margin-left: 50%;
+.toCheckout{ 
+    width: 100px;
+    height: 30px;
+    margin-left: 150px;
+    margin-top: 60%
 }
 
 
 .Title{ 
     position: absolute;
-    margin-left: 60px;
-    margin-top: 12px;
-    height: 60px;
-    font-size: xx-small;
-}
-
-.qty{ 
-    position: absolute;
-    margin-left: 300px;
-    font-size: s;
-    margin-top: 20px;
-    padding: 2%;
+    margin-left: 120px;
+    margin-top: 15px;
+    font-size: small;
 }
 
 .Price{
     position: absolute;
-    margin-left: 265px;
-    margin-top: 18px;
+    margin-left: 970%;
+    margin-top: 30px;
     font-size: small;
 }
 

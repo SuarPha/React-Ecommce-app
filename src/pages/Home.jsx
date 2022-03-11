@@ -9,9 +9,7 @@ import Slider from '../components/Slider';
 const Home = ({addProduct}) => {
   return (
     <div>
-      <Announcement />
-      <Slider />
-      <Categories />
+      {/* min cart blev osynlig bakom announcment och categories och slider så jag har tagit bort dom för att man ska se */}
       <Products addProduct={addProduct}/>
       <Newsletter/>
       <Footer/>
