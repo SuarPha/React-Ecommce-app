@@ -5,7 +5,7 @@ import payment from "../image/payment.png"
 
 const Container = styled.div`
     display: flex;
-    background-color: #fff;
+    background-color: #f6f6f6;
 `;
 const Left = styled.div`
       flex: 1;

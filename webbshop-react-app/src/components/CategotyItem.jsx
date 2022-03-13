@@ -14,10 +14,6 @@ const Image = styled.img`
     object-fit: cover;
 `;
 
-
-const Wrapper = styled.h1`
-    flex: 1;
-`;
 const Info = styled.div`
     position: absolute;
     top: 0;
@@ -49,9 +45,7 @@ const Button = styled.button`
 const CategoryItem = ({item}) => {
   return (
     <Container>
-        <Wrapper>
-        Categories
-        </Wrapper>
+       
         <Image src = {item.img}/>
         <Info>
             <Title>{item.title}</Title>

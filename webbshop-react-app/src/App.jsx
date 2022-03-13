@@ -1,14 +1,21 @@
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import Home from "./pages/Home";
+import ProductsPage from "./pages/ProductsPage";
+import ProductSinglePage from "./pages/ProductSinglePage";
+import CheckoutCart from "./pages/CheckoutCart";
 
-import Home from './pages/Home';
-import ProductList from './pages/ProductList';
-import Product from './pages/Product';
-
-
-
-const App = () => {
+function App() {
   return (
-    <Home />
-  )
-};
-
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/ProductsPage" element={<ProductsPage />} />
+          <Route path="/ProductSinglePage" element={<ProductSinglePage />} />
+          <Route path="/cart" element={<CheckoutCart />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
 export default App;

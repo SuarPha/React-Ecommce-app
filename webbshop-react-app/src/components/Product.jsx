@@ -60,6 +60,7 @@ const Icon = styled.div`
 
 const Product = ({item}) => {
   return (
+      <div>
     <Container>
         <Image src={item.img} />
         <Info>
@@ -74,6 +75,7 @@ const Product = ({item}) => {
             </Icon>
         </Info>
     </Container>
+    </div>
   );
 };
 

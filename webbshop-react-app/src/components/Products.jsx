@@ -1,41 +1,45 @@
-
-import styled from 'styled-components';
-import {popularItem} from '../data';
-import Product from './Product';
-
-
+import { Navbar } from "react-bootstrap";
+import styled from "styled-components";
+import { popularItem } from "../data";
+import Announcement from "./Announcement";
+import Footer from "./Footer";
+import Product from "./Product";
 
 const Container = styled.div`
-    flex: 1;
-    margin: 3px;
-    height: 65vh;
-    position: relative;
+  flex: 1;
+  margin: 3px;
+  height: 65vh;
+  position: relative;
 `;
 
 const Wrapper = styled.div`
-    display: flex;
+  display: flex;
 `;
 
 const InfoTitle = styled.h1`
-   padding-top:20px;
-   padding-bottom: 20px;
-   display: flex;
-   justify-content: center;
-   align-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 `;
 
 const Products = () => {
-return (
-    <Container>
-         <InfoTitle>Popular Product</InfoTitle>
+  return (
+    <div>
+      <Container>
+        <Navbar />
+        <Announcement />
+        <InfoTitle>Popular Products</InfoTitle>
         <Wrapper>
-        {popularItem.map((item) => (
-        <Product item={item} key={item.id} />
-        ))}
+          {popularItem.map((item) => (
+            <Product item={item} key={item.id} />
+          ))}
         </Wrapper>
-    </Container>
-);
-  
+        <Footer />
+      </Container>
+    </div>
+  );
 };
 
 export default Products;
